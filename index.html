@@ -3,30 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML & JS Example</title>
+    <title>Interactive Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+        /* Стилі для модального вікна */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
+        #modalContent {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 80%;
+        }
+        .close {
+            color: red;
+            float: right;
             cursor: pointer;
-        }
-        p {
-            font-size: 18px;
-            color: green;
         }
     </style>
 </head>
 <body>
+    <h1>Welcome to the Interactive Page</h1>
 
-    <h1>Hello, World!</h1>
-    <p id="displayText">Click the button to see the magic!</p>
+    <!-- Кнопка для відкриття модального вікна -->
+    <button id="openModal">Open Modal</button>
 
-    <button onclick="changeText()">Click Me!</button>
+    <!-- Модальне вікно -->
+    <div id="myModal">
+        <div id="modalContent">
+            <span id="closeModal" class="close">&times;</span>
+            <p>This is a modal window</p>
+        </div>
+    </div>
+
+    <!-- Кнопка з анімацією при кліку -->
+    <button id="animateBtn">Click me for animation</button>
+
+    <!-- Контейнер для постів -->
+    <div id="posts">
+        <h2>Posts</h2>
+    </div>
 
     <script src="script.js"></script>
 </body>
